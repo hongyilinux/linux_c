@@ -1,0 +1,33 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+PAT	glob.c	7;"	d	file:
+PAT	readdir.c	5;"	d	file:
+PAT	test/glob.c	5;"	d	file:
+PAT	test/readdir.c	5;"	d	file:
+PATHSIZE	mydu.c	17;"	d	file:
+errfunc__	glob.c	/^static int errfunc__(const char *errpath,int eerrno)$/;"	f	file:
+errfunc__	test/glob.c	/^int errfunc__(const char *errpath,int errno)$/;"	f
+file_type	test/ftype.c	/^static int file_type(const char *fname)$/;"	f	file:
+flen	flen.c	/^static int flen(const char *fname)$/;"	f	file:
+flen	test/flen.c	/^static off_t flen(const char *fname)   \/\/禁止外部扩展$/;"	f	file:
+ftype	ftype.c	/^static int  ftype(const char *fname)  \/\/思考为什么不用char$/;"	f	file:
+main	big.c	/^int main (int argc ,char **argv)$/;"	f
+main	flen.c	/^int main (int argc ,char **argv)$/;"	f
+main	ftype.c	/^int main (int argc,char **argv)$/;"	f
+main	glob.c	/^int main (int argc,char **argv)$/;"	f
+main	main.c	/^int main (int argc ,char *argv[])$/;"	f
+main	mydu.c	/^int main (int argc ,char **argv)$/;"	f
+main	readdir.c	/^int main ()$/;"	f
+main	test/big.c	/^int main (int argc , char **argv)$/;"	f
+main	test/flen.c	/^int main(int argc,char **argv)$/;"	f
+main	test/ftype.c	/^int main (int argc ,char **argv)$/;"	f
+main	test/glob.c	/^int main(int argc,char **argv)$/;"	f
+main	test/main.c	/^int main(int argc, char **argv)$/;"	f
+main	test/readdir.c	/^int main ()$/;"	f
+main	test/username.c	/^int main(int argc,char **argv)$/;"	f
+mydu	mydu.c	/^static int64_t mydu(const char *path)$/;"	f	file:
+path_noloop	mydu.c	/^static int  path_noloop(const char *path)$/;"	f	file:

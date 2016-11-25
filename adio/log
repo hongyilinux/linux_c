@@ -1,0 +1,36 @@
+				高级IO-------非阻塞IO
+非阻塞IO
+1、非阻塞IO是什么?
+	有限状态机编程思想
+		复杂流程：一个程序的自然流程不是结构化的
+		简单流程：如果一个程序的自然流程是结构化的
+2、IO多路转接
+	监视文件描述符的行为。当当前的文件描述符发生改变，进行下一步行为
+	select()：移植性好，以事件为单位，组织文件描述符
+		1、select 布置监视任务的和结果的返回位置是共用的。（读集有返回，也回把其他的集合清空了）
+		int select(int nfds, fd_set *readfds, fd_set *writefds,
+		                  fd_set *exceptfds, struct timeval *timeout);
+		2、如果nfds参数超过了有符号数整形的大小，就会产生溢出
+
+		3、注意参数是没有const修饰的
+
+		4、监视事件比较单一。除了读、写，异常，其他没有
+		 
+		 void FD_CLR(int fd, fd_set *set);		//把fd 从set中清楚
+		 int  FD_ISSET(int fd, fd_set *set);	//判断fd是否在set中
+	     void FD_SET(int fd, fd_set *set);		//把fd添加到set中
+		 void FD_ZERO(fd_set *set);				//把set置空
+		
+		5、select(int nfds,NULL,NULL,NULL,&timeout);可以用做sleep休眠功能
+
+		6、select最后一个参数如果设置为NULL表明select是阻塞等，可能被信号打断，需要 检测EINTR错误
+
+	poll()：poll机制和select的组织思路是完全不一致的，以文件描述符为单位组织事件的
+	epoll()：linux的方言。epoll不是用户维护
+3、其他读写函数
+	readv()
+	writev();
+4、存储映射IO
+5、文件锁的内容
+
+
